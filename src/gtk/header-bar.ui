@@ -191,6 +191,28 @@
                             <child>
                               <object class="GtkMenuButton">
                                 <property name="tooltip-text" translatable="yes">Menu</property>
+                                <property name="icon-name">network-server-symbolic</property>
+
+                                <property name="popover">
+                                  <object class="GtkPopoverMenu">
+                                    <property name="menu-model">new_tab_menu</property>
+                                    <child type="style-switcher">
+                                      <object class="TerminalStyleSwitcher" />
+                                    </child>
+                                  </object>
+                                </property>
+
+                                <binding name="visible">
+                                  <lookup name="show-menu-button">
+                                    <lookup name="settings">TerminalHeaderBar</lookup>
+                                  </lookup>
+                                </binding>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="GtkMenuButton">
+                                <property name="tooltip-text" translatable="yes">Menu</property>
                                 <property name="icon-name">open-menu-symbolic</property>
 
                                 <property name="popover">
@@ -293,6 +315,28 @@
                                 <binding name="visible">
                                   <lookup name="fullscreened">
                                     <lookup name="window">TerminalHeaderBar</lookup>
+                                  </lookup>
+                                </binding>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="GtkMenuButton">
+                                <property name="tooltip-text" translatable="yes">Menu</property>
+                                <property name="icon-name">network-server-symbolic</property>
+
+                                <property name="popover">
+                                  <object class="GtkPopoverMenu">
+                                    <property name="menu-model">new_tab_menu</property>
+                                    <child type="style-switcher">
+                                      <object class="TerminalStyleSwitcher" />
+                                    </child>
+                                  </object>
+                                </property>
+
+                                <binding name="visible">
+                                  <lookup name="show-menu-button">
+                                    <lookup name="settings">TerminalHeaderBar</lookup>
                                   </lookup>
                                 </binding>
                               </object>
